@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizManager - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="desktop-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>MENU</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#"><i class="bi bi-house"></i> Início</a></li>
+                <li><a href="#"><i class="bi bi-file-earmark-text"></i> Notas Fiscais</a></li>
+                <li><a href="#"><i class="bi bi-cash"></i> Financeiro</a></li>
+                <li><a href="#"><i class="bi bi-calendar"></i> Agenda</a></li>
+                <li><a href="#"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="#"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                <h1>BIZMANAGER</h1>
+            </header>
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <!-- Notas Fiscais Section -->
+                <section class="dashboard-section">
+                    <h2>NOTAS FISCAIS</h2>
+                    <table class="notas-table">
+                        <thead>
+                            <tr>
+                                <th>N° NOTA</th>
+                                <th>DATA DA NOTA</th>
+                                <th>VALOR TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NF 01</td>
+                                <td>25.06.2024</td>
+                                <td>R$ 200,00</td>
+                            </tr>
+                            <tr>
+                                <td>NF 02</td>
+                                <td>25.06.2024</td>
+                                <td>R$ 200,00</td>
+                            </tr>
+                            <tr>
+                                <td>NF 03</td>
+                                <td>25.06.2024</td>
+                                <td>R$ 200,00</td>
+                            </tr>
+                            <tr>
+                                <td>NF 04</td>
+                                <td>25.06.2024</td>
+                                <td>R$ 200,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Financeiro Section -->
+                <section class="dashboard-section">
+                    <h2>FINANCEIRO</h2>
+                    <div class="financeiro-cards">
+                        <div class="card">
+                            <h3>FATURAMENTO</h3>
+                            <p>R$ 100.000</p>
+                        </div>
+                        <div class="card">
+                            <h3>DESPESAS</h3>
+                            <p>R$ 32.000</p>
+                        </div>
+                        <div class="card">
+                            <h3>CAIXA</h3>
+                            <p>R$ 68.000</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Agenda Section -->
+                <section class="dashboard-section">
+                    <h2>AGENDA</h2>
+                    <div class="agenda-list">
+                        <div class="agenda-item">
+                            <h3>REUNIÃO FINANCEIRA</h3>
+                            <p>08:30 AM</p>
+                        </div>
+                        <div class="agenda-item">
+                            <h3>SERVIÇO FULANO</h3>
+                            <p>13:00 PM</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

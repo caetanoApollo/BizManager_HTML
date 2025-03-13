@@ -1,0 +1,251 @@
+body {
+    font-family: "Bebas Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #F5F5F5;
+    background: linear-gradient(to bottom, #5A7D85, #1C3D5A);
+}
+
+header {
+    background-color: #0F2A3D;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 8vh;
+}
+
+.login-section {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 45%;
+    color: #F5F5F5;
+}
+
+.login-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 5px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #F5F5F5;
+    font-size: 1rem;
+    color: #F5F5F5;
+}
+
+.input-group input:focus {
+    outline: none; 
+}
+.btn-entrar, .btn-cadastrar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-entrar {
+    background-color: #1C3D5A;
+    color: #F5F5F5;
+}
+
+.btn-entrar:hover {
+    background-color: #0F2A3D;
+}
+
+.btn-cadastrar {
+    background-color: #5A7D85;
+    color: #F5F5F5;
+}
+
+.btn-cadastrar:hover {
+    background-color: #3C5A6B;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.forgot-password a {
+    color: #F5F5F5;
+    text-decoration: underline;
+}
+
+.info-section {
+    width: 45%;
+    text-align: center;
+}
+
+.info-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dashboard-section {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.dashboard-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Notas Fiscais Table */
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notas-table th, .notas-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.notas-table th {
+    font-size: 1.2rem;
+}
+
+.notas-table td {
+    font-size: 1rem;
+}
+
+/* Financeiro Cards */
+.financeiro-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+/* Agenda List */
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.agenda-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.agenda-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.agenda-item p {
+    font-size: 1rem;
+    color: rgba(245, 245, 245, 0.8);
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(15, 42, 61, 0.9); /* Cor de fundo com transparência */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu i {
+    font-size: 1.2rem;
+}
