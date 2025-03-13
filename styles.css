@@ -4,6 +4,9 @@ body {
     padding: 0;
     color: #F5F5F5;
     background: linear-gradient(to bottom, #5A7D85, #1C3D5A);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -27,8 +30,8 @@ main {
 }
 
 .login-section {
-    background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px); 
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     padding: 40px;
@@ -63,8 +66,9 @@ main {
 }
 
 .input-group input:focus {
-    outline: none; 
+    outline: none;
 }
+
 .btn-entrar, .btn-cadastrar {
     width: 100%;
     padding: 10px;
@@ -124,6 +128,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding: 20px;
 }
 
 .dashboard-section {
@@ -132,6 +137,7 @@ main {
     border-radius: 20px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    width: 150vh;
 }
 
 .dashboard-section h2 {
@@ -140,7 +146,6 @@ main {
     text-align: center;
 }
 
-/* Notas Fiscais Table */
 .notas-table {
     width: 100%;
     border-collapse: collapse;
@@ -154,13 +159,13 @@ main {
 
 .notas-table th {
     font-size: 1.2rem;
+    font-weight: normal;
 }
 
 .notas-table td {
     font-size: 1rem;
 }
 
-/* Financeiro Cards */
 .financeiro-cards {
     display: flex;
     justify-content: space-between;
@@ -168,6 +173,7 @@ main {
 }
 
 .card {
+    color: #F5F5F5;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 20px;
@@ -176,15 +182,14 @@ main {
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
 .card p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-/* Agenda List */
 .agenda-list {
     display: flex;
     flex-direction: column;
@@ -192,27 +197,38 @@ main {
 }
 
 .agenda-item {
+    display: flex;
+    gap: 60%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 15px;
 }
 
 .agenda-item h3 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 
 .agenda-item p {
-    font-size: 1rem;
+    font-size: 2rem;
     color: rgba(245, 245, 245, 0.8);
 }
 
 .sidebar {
     width: 250px;
-    background: rgba(15, 42, 61, 0.9); /* Cor de fundo com transparência */
+    background: rgba(15, 42, 61, 0.9);
     backdrop-filter: blur(10px);
     padding: 20px;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 100%;
+    left: -250px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
 }
 
 .sidebar-header h2 {
@@ -248,4 +264,115 @@ main {
 
 .sidebar-menu i {
     font-size: 1.2rem;
+}
+
+.toggle-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #F5F5F5;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 5vh;
+    }
+
+    .login-section, .info-section {
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .login-section {
+        padding: 20px;
+    }
+
+    .btn-entrar, .btn-cadastrar {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.dashboard-section {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.financeiro-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.agenda-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    left: -250px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+@media (max-width: 1024px) {
+    .financeiro-cards {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .agenda-item {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
 }
